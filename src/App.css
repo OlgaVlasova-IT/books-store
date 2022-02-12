@@ -49,6 +49,7 @@ justify-content: center;
 }
 
 .bestsellersMainCont{
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +61,7 @@ justify-content: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 .card {
   height: 25hv;
@@ -90,13 +91,13 @@ justify-content: center;
 }
 .cardBestseller{
   height: 28hv;
-  width:50%;
+  width:80%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 2%;
-  margin: 20px;
+  margin: 5px;
 
 }
 .noDisplay {
@@ -105,15 +106,15 @@ justify-content: center;
 
 .bestsellersCont{
   height: 35hv;
-  width:50%;
+  width:120%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-top: solid 2px;
-  border-bottom: solid 2px;
+  border-top: solid 2px lightgrey;
+  border-bottom: solid 2px lightgrey;
   padding: 2%;
-  margin: 20px;
+  margin: 5px;
 }
 
 .imgCont{
@@ -174,6 +175,19 @@ height: auto;
 
 
 @media all and (max-width: 800px) {
+  .cardBestseller{
+
+    width:120%;
+    display: flex;
+  }
+
+  .bestsellersCont{
+    /* height: 35hv; */
+    width:95%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0; 
+  }
   .sortCont{
     width: 95%;
   }

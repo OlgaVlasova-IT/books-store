@@ -54,7 +54,6 @@ const sortLowToHigh = (arr) => {
 
 const sortHighToLow = (arr) => {
     
-    console.log(arr)
    for (let i = 0; i < arr.length; i++) {
        for (let j = 0; j < arr.length-1; j++) {
            console.log(j, arr[j])
@@ -67,9 +66,7 @@ const sortHighToLow = (arr) => {
    }
 
    let temp = [...arr];
-   console.log(temp)
    setBooks(temp)
-
 
 }
 

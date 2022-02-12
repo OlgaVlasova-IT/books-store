@@ -144,6 +144,6 @@ export const data = [
         price: 6.99,
         desc: "One little snail longs to see the world and hitches a lift on the tail of an enormous whale. Together they go on an amazing journey, past icebergs and volcanoes, sharks and penguins, and the little snail feels so small in the vastness of the world. But when disaster strikes and the whale is beached in a bay, it's the tiny snail's big plan that saves the day.",
         image: "image/14.jpg",
-        searchTerm: "0-2 2-5, toddlers"}
+        searchTerm: "0-2, 2-5, babies, toddlers"}
 
 ]

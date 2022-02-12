@@ -1,4 +1,4 @@
-function Books({propBooks, propShowMore, propFunction}) {
+function Books({propBooks, propShowMore, propFunction, propSortLowToHigh, propSortHighToLow}) {
  
  
     return(
@@ -7,8 +7,18 @@ function Books({propBooks, propShowMore, propFunction}) {
        
         <div className='booksCatalog'>
         <h4>Explore our selection of {propBooks.length} books</h4>
+        <div className="sortCont"> 
+          <p> Sort by:</p>
+          <button 
+          className="btnSort"
+          onClick={()=>{propSortLowToHigh(propBooks)}}
+          >Price: Low-High</button>
+          <button className="btnSort"
+          onClick={()=>{propSortHighToLow(propBooks)}}
+           >Price: High-Low</button>
+        </div>
         {propBooks.map( book => {
-          const {id, bookname , author, price, desc, image} = book;
+          const {id, bookname , author, price, desc, image, searchTerm} = book;
           return(
             <div  key={id} className='card'>
             <div className="upperBlock">
@@ -18,8 +28,9 @@ function Books({propBooks, propShowMore, propFunction}) {
             <div className="detailsCont">
              <h3>{bookname}</h3>
              <p> by <span className="author">{author}</span></p> 
+             <p>category: <span className="author">{searchTerm}</span></p>
              <p className="price">  ${price}</p>
-             <button>Like</button>
+             {/* <button>Like</button> */}
              <button>Add to cart</button>
              </div>
              </div>

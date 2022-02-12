@@ -32,11 +32,57 @@ const handleClearMore = () =>{
     setBooks(data);
 }
 
+const sortLowToHigh = (arr) => {
+    
+    
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length-1; j++) {
+    
+            if (arr[j].price > arr[j + 1].price) {
+                let tmp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tmp;
+            }
+        }
+    }
+
+    let temp = [...arr];
+    setBooks(temp)
+
+
+}
+
+const sortHighToLow = (arr) => {
+    
+    console.log(arr)
+   for (let i = 0; i < arr.length; i++) {
+       for (let j = 0; j < arr.length-1; j++) {
+           console.log(j, arr[j])
+           if (arr[j].price < arr[j + 1].price) {
+               let tmp = arr[j];
+               arr[j] = arr[j + 1];
+               arr[j + 1] = tmp;
+           }
+       }
+   }
+
+   let temp = [...arr];
+   console.log(temp)
+   setBooks(temp)
+
+
+}
+
 return(
     <div>
         <Filters propFilter={filterByAge} propClearAll ={handleClearMore}/>
         {/* <Bestsellers /> */}
-        <Books propBooks={books} propShowMore={showMore} propFunction={handleShowMore} />
+      <Books
+    propBooks={books}
+    propShowMore={showMore}
+    propFunction={handleShowMore}
+    propSortLowToHigh={sortLowToHigh}
+    propSortHighToLow={sortHighToLow}/>
     </div>
 )}
 

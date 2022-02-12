@@ -14,51 +14,52 @@ const filterChangeId = (item) =>{
    return item
   }
 }
-const handleNext = () => {
+const handleNext = (inputNumber) => {
+    if (inputNumber >= bestsellers.length) {
 
-    // let temp = input+display
-    // // console.log(temp)
-    // // setStart(3);
+        let tempStart = 0;
+        setStart(tempStart);
+    } else{
 
     let tempStart = start + display;
     console.log("tempStart" + tempStart);
-    
+
     setStart(tempStart);
     console.log(start);
-//     for (let i=start ; i <= start+display ; i ++)  {
-//    console.log("loop")
-//    console.log(i, start, display + start)
-   
-//          const temp=[];
-//          temp.push(bestsellers[i])
-//          console.log(temp)
-         
-        
-//     }
+    }
+}
 
-//     setFilteredBest(temp);
+const handlePrev = (inputNumber) => {
+    if (inputNumber <= 0) {
+        // console.log("bracn if")
+        // console.log("input Number" , inputNumber)
+        
+        let tempStart = bestsellers.length -display;
+        // console.log("tempStart", tempStart)
+        setStart(tempStart);
+        // console.log("tempStart" + tempStart);
+
+    }else{
+        let tempStart = start-display;
+        setStart(tempStart);
+        // console.log("tempStart" + tempStart);
+
+
+    }
+
+
 }
 const temp = books.filter(filterChangeId)
 const [bestsellers, setBestsellers] = useState(temp);
-// const [filteredBest, setFilteredBest] = useState(bestsellers.filter(item=> (item.id > start && item.id <= start+display)))
-// console.log("filtered array ", filteredBest);
-console.log("start ", start);
-console.log("start +display ", start +display);
+// console.log("start ", start);
+// console.log("start +display ", start );
 console.log(bestsellers)
-// console.log(filteredBest)
-// const [booksNoFilter, setBooksNoFilter] = useState(data);
-
-// // array of variables to display short/full description of the book
-// const [showMore, setShowMore] = useState(new Array(books.length).fill(false))
-
-
-
-console.log(start)
+// console.log(start)
     return(
      
-        <div>
+        <div className='bestsellersMainCont'>
             <div className='bestsellersCont'>
-                <button>Prev</button>
+                <button onClick={()=>{handlePrev(start)}}>Prev</button>
               
                 {bestsellers.map( book => {
 
@@ -68,7 +69,7 @@ console.log(start)
                 if (id >= start+1 && id <= start +display) {
                 // if  (searchTerm.includes("bestseller"))  {
                 return(
-                   <div  key="id" className='cardBestseller'>
+                   <div  key={id} className='cardBestseller'>
                     <img src={image} height="100px"></img>
                     <p>{bookname}</p>
                     <p >by <span className='author'>{author}</span></p>
@@ -78,12 +79,12 @@ console.log(start)
                 )
                 } else 
                 return(
-                    <div key="id" className="noDisplay"> </div>
+                    <div key={id+100} className="noDisplay"> </div>
                 )
             })}
                 
 
-                <button onClick={() => {handleNext()}}>Next</button>
+                <button onClick={() => {handleNext(start+display)}}>Next</button>
             </div>
 
      

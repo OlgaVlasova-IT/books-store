@@ -1,7 +1,6 @@
 import Home from './Home'
 import Bestsellers from './Bestsellers';
 import './App.css';
-import Books from './Books';
 import {
 
   BrowserRouter as Router,
@@ -15,9 +14,11 @@ import {
 } from "react-router-dom";
 
 
+
 function App() {
   return (
     <div>
+      {/* <Cover/> */}
       <Router>
         <nav className="navBar">
           <Link to="/" className="link">
@@ -30,7 +31,7 @@ function App() {
             Contact
           </Link>
         </nav>
-
+    
         <Routes>
           <Route path="/" element={
               <Home

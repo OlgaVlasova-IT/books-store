@@ -61,7 +61,7 @@ const [bestsellers, setBestsellers] = useState(temp);
                 return(
                    <div  key={id} className='cardBestseller'>
                       <div className='img'>
-                    <img src={image} height="100px"></img>
+                    <img src={image} width="150px"></img>
                     </div> 
                     <div className='bookNameCont'>
                     <p>{bookname}</p>

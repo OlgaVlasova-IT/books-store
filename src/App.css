@@ -79,7 +79,7 @@ justify-content: center;
 
   background-color: transparent;
   border: solid 2px  lightgrey;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 30px;
 }
 
@@ -172,9 +172,28 @@ height: auto;
  padding-top: 15px;
  
 }
+.coverCont{
+  width:100%;
+  background-image: url("/public/image/cover.jpg");
+  background-size: cover;
+  background-size: 2000px;
+  background-repeat: +no-repeat;
+  
 
+}
 
 @media all and (max-width: 800px) {
+  .bestsellersMainCont{
+    width: 95%;
+
+  }
+  .btnSort{
+
+    font-size: 12px;
+    height: auto;
+    padding: 3px;
+    margin: 3px;
+  }
   .cardBestseller{
 
     width:120%;

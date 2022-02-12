@@ -33,7 +33,7 @@ const handleClearMore = () =>{
 }
 
 const sortLowToHigh = (arr) => {
-    
+    console.log(arr)
     
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length-1; j++) {
@@ -45,18 +45,15 @@ const sortLowToHigh = (arr) => {
             }
         }
     }
-
     let temp = [...arr];
     setBooks(temp)
-
-
 }
 
 const sortHighToLow = (arr) => {
+  console.log(arr)
     
    for (let i = 0; i < arr.length; i++) {
        for (let j = 0; j < arr.length-1; j++) {
-           console.log(j, arr[j])
            if (arr[j].price < arr[j + 1].price) {
                let tmp = arr[j];
                arr[j] = arr[j + 1];
@@ -64,22 +61,53 @@ const sortHighToLow = (arr) => {
            }
        }
    }
-
    let temp = [...arr];
    setBooks(temp)
-
 }
+ 
+const sortAZ = (arr) => {
+
+      
+     for (let i = 0; i < arr.length; i++) {
+         for (let j = 0; j < arr.length-1; j++) {
+             if (arr[j].bookname.toLowerCase() > arr[j + 1].bookname.toLowerCase()) {
+                 let tmp = arr[j];
+                 arr[j] = arr[j + 1];
+                 arr[j + 1] = tmp;
+             }
+         }
+     }
+     let temp = [...arr];
+     setBooks(temp)
+  }
+
+  const sortZA = (arr) => {
+ 
+     for (let i = 0; i < arr.length; i++) {
+         for (let j = 0; j < arr.length-1; j++) {
+             if (arr[j].bookname.toLowerCase() < arr[j + 1].bookname.toLowerCase()) {
+                 let tmp = arr[j];
+                 arr[j] = arr[j + 1];
+                 arr[j + 1] = tmp;
+             }
+         }
+     }
+     let temp = [...arr];
+     setBooks(temp)
+  }
 
 return(
     <div>
         <Filters propFilter={filterByAge} propClearAll ={handleClearMore}/>
-        {/* <Bestsellers /> */}
       <Books
     propBooks={books}
     propShowMore={showMore}
     propFunction={handleShowMore}
-    propSortLowToHigh={sortLowToHigh}
-    propSortHighToLow={sortHighToLow}/>
+    propSortHighToLow={sortLowToHigh}
+    propSortLowToHigh={sortHighToLow}
+    propSortAZ ={sortAZ}
+    propSortZA ={sortZA}
+   />
     </div>
 )}
 

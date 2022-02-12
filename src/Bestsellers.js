@@ -6,7 +6,7 @@ function Bestsellers() {
 const [books, setBooks] = useState(data);
 let i = 0;
 const [start, setStart]= useState(0);
-const [display, setDisplay]= useState(3);
+const [display, setDisplay]= useState(2);
 const filterChangeId = (item) =>{
   if (item.searchTerm.includes("bestseller")){
    item.id= i+1;

@@ -1,5 +1,7 @@
-function Books({propBooks, propShowMore, propFunction, propSortLowToHigh, propSortHighToLow}) {
- 
+
+
+function Books({propBooks, propShowMore, propFunction, propSortHighToLow, propSortLowToHigh, propSortAZ, propSortZA}) {
+
  
     return(
 
@@ -16,6 +18,13 @@ function Books({propBooks, propShowMore, propFunction, propSortLowToHigh, propSo
           <button className="btnSort"
           onClick={()=>{propSortHighToLow(propBooks)}}
            >Price: High-Low</button>
+
+         <button className="btnSort"
+          onClick={()=>{propSortAZ(propBooks)}}
+           >Title: A-Z</button>
+           <button className="btnSort"
+          onClick={()=>{propSortZA(propBooks)}}
+           >Title: A-Z</button>
         </div>
         {propBooks.map( book => {
           const {id, bookname , author, price, desc, image, searchTerm} = book;

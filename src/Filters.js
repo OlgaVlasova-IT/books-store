@@ -1,4 +1,4 @@
-function Filters({propFilter}) {
+function Filters({propFilter, propClearAll}) {
 
     return(
         <div className="filterRootCont">
@@ -8,6 +8,7 @@ function Filters({propFilter}) {
  <button className="filterBtn" onClick={()=> {propFilter("5-8")}}>Kids (5-8)</button>
  <button  className="filterBtn"onClick={()=> {propFilter("8-12")}}>Kids (8-12)</button>
  <button className="filterBtn" onClick={()=> {propFilter("12+")}}>Teens (12+)</button>
+ <button className="filterBtn" onClick={()=>{propClearAll()}}>Clear All</button>
 
         </div>
         </div>

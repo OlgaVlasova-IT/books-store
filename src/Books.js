@@ -6,6 +6,7 @@ function Books({propBooks, propShowMore, propFunction}) {
         <div className="App">
        
         <div className='booksCatalog'>
+        <h4>Explore our selection of {propBooks.length} books</h4>
         {propBooks.map( book => {
           const {id, bookname , author, price, desc, image} = book;
           return(

@@ -2,6 +2,7 @@ import Filters from "./Filters";
 import { useState } from 'react';
 import { data } from './data' 
 import Books from "./Books"
+import Bestsellers from "./Bestsellers";
 
 
 function Home() {
@@ -26,11 +27,16 @@ const handleShowMore = (id) => {
     temp[id - 1] = !temp[id - 1];
     setShowMore(temp);
 }
+const handleClearMore = () =>{
+  
+    setBooks(data);
+}
 
 return(
     <div>
-        <Filters propFilter={filterByAge}/>
-        <Books propBooks={books} propShowMore={showMore} propFunction={handleShowMore}/>
+        <Filters propFilter={filterByAge} propClearAll ={handleClearMore}/>
+        {/* <Bestsellers /> */}
+        <Books propBooks={books} propShowMore={showMore} propFunction={handleShowMore} />
     </div>
 )}
 

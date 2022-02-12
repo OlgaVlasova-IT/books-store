@@ -22,42 +22,33 @@ const handleNext = (inputNumber) => {
     } else{
 
     let tempStart = start + display;
-    console.log("tempStart" + tempStart);
-
     setStart(tempStart);
-    console.log(start);
+   
     }
 }
 
 const handlePrev = (inputNumber) => {
     if (inputNumber <= 0) {
-        // console.log("bracn if")
-        // console.log("input Number" , inputNumber)
-        
+       
         let tempStart = bestsellers.length -display;
-        // console.log("tempStart", tempStart)
         setStart(tempStart);
-        // console.log("tempStart" + tempStart);
 
     }else{
         let tempStart = start-display;
         setStart(tempStart);
-        // console.log("tempStart" + tempStart);
-
-
     }
 
 
 }
 const temp = books.filter(filterChangeId)
 const [bestsellers, setBestsellers] = useState(temp);
-// console.log("start ", start);
-// console.log("start +display ", start );
-console.log(bestsellers)
-// console.log(start)
+
     return(
-     
+        <div className='booksCatalog'>
+            <h2>Our bestseller</h2>
+
         <div className='bestsellersMainCont'>
+            
             <div className='bestsellersCont'>
                 <button onClick={()=>{handlePrev(start)}}>Prev</button>
               
@@ -67,11 +58,14 @@ console.log(bestsellers)
                 
             
                 if (id >= start+1 && id <= start +display) {
-                // if  (searchTerm.includes("bestseller"))  {
                 return(
                    <div  key={id} className='cardBestseller'>
+                      <div className='img'>
                     <img src={image} height="100px"></img>
+                    </div> 
+                    <div className='bookNameCont'>
                     <p>{bookname}</p>
+                    </div>
                     <p >by <span className='author'>{author}</span></p>
                     <p className='price'>$ {price}</p>
                     <button > Add to Cart</button>
@@ -83,11 +77,10 @@ console.log(bestsellers)
                 )
             })}
                 
-
-                <button onClick={() => {handleNext(start+display)}}>Next</button>
+<button onClick={() => {handleNext(start+display)}}>Next</button>
             </div>
 
-     
+            </div>
         </div>
     )
 }

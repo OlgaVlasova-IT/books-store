@@ -44,8 +44,8 @@ justify-content: center;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  width: 80%;
-  margin: 20px;
+  width: 95%;
+  margin: 5px;
 }
 
 .bestsellersMainCont{
@@ -63,19 +63,19 @@ justify-content: center;
   flex-wrap: wrap;
 }
 .card {
-  height: 30hv;
+  height: 25hv;
   width:50%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-top: solid 2px;
+  border-top: solid 2px lightgrey;
   padding: 2%;
-  margin: 20px;
+  margin: 5px;
 
 }
 .cardBestseller{
-  height: auto;
+  height: 28hv;
   width:50%;
   display: flex;
   flex-direction: column;
@@ -88,8 +88,14 @@ justify-content: center;
 .noDisplay {
   display: none;
 }
+/* .bookNameCont{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  height: 5hv;
+} */
 .bestsellersCont{
-  height: 30hv;
+  height: 35hv;
   width:50%;
   display: flex;
   flex-direction: row;
@@ -136,6 +142,9 @@ height: auto;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  /* border-top: solid 2px; */
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .filterBtn{
@@ -151,7 +160,7 @@ height: auto;
  display: flex;
  justify-content: center;
  padding-top: 15px;
- padding-left: 15px;
+ 
 }
 
 

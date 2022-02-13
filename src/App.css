@@ -113,11 +113,24 @@ text-align: center;
 
 }
 .btnSort{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
-  background-color: transparent;
-  border: solid 2px  lightgrey;
+  background-color: #95c7d0;
+  border: none;
   border-radius: 10px;
-  height: 30px;
+  height: 40px;
+  /* border: 2px solid #336B75; */
+ 
+}
+
+.btnSort:hover {
+  background-color: #3e828e; 
+  color: whitesmoke;
+  text-transform: uppercase;
+
 }
 
 .sortCont{
@@ -196,13 +209,24 @@ height: auto;
 
 .filterBtn{
   text-align: center;
- background-color: transparent;
- width: 60px;
- height: 60px;
- border-radius: 30px;
- border: solid 2px lightcoral;
+ background-color: #e1dad0; 
+ color: black;
+ /* border:2px solid #9E866B; */
+ width: 70px;
+ height: 70px;
+ border-radius: 35px;
+ border-style: none  ;
 
+ 
 }
+
+.filterBtn:hover{
+  text-transform: uppercase;
+ background-color: #9E866B; 
+ color: whitesmoke;
+}
+
+
 .filterRootCont{
  display: flex;
  justify-content: center;
@@ -226,8 +250,9 @@ height: auto;
   }
   .btnSort{
 
+
     font-size: 12px;
-    height: auto;
+    height: 30px;
     padding: 3px;
     margin: 3px;
   }

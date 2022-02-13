@@ -13,11 +13,13 @@ const [showMore, setShowMore] = useState(new Array(books.length).fill(false))
 
 
 const filterByAge = (input) => {
+
     let temp = [...booksNoFilter];
     temp = temp.filter(book => book.searchTerm.includes(input))
     setBooks(temp);
+    
 }
-console.log(books)
+
 //function to update the value of showMore[id-1] to the opposite (true/false)
 const handleShowMore = (id) => {
     let temp = [...showMore];

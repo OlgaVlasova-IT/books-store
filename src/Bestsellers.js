@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { data } from './data' 
+import { data1 } from './data1' 
 import Carousel from './Carousel';
 
 function Bestsellers() {
-    const [books, setBooks] = useState(data);
+const [booksList] = useState(data1) ;
 let i = 0;
+
 const filterBestsellerBabiesToddlers = (item) =>{
   if (item.searchTerm.includes("bestseller") && (item.searchTerm.includes("0-2")|| item.searchTerm.includes("2-5")  )){
    item.id= i+1;
@@ -21,12 +22,12 @@ const filterBestsellerKids = (item) =>{
     }
   }
 
-const temp1 = books.filter(filterBestsellerBabiesToddlers)
-const temp2 = books.filter(filterBestsellerKids)
+const temp1 = booksList.filter(filterBestsellerBabiesToddlers)
+const temp2 = booksList.filter(filterBestsellerKids)
 const [bestsellersBabiesToddlers] = useState(temp1);
 const [bestsellersKids] = useState(temp2);
 
-return(<div className='bestCont'>
+return(<div className='booksCatalog'>
      <h2>Our bestseller for Babies and Toddlers</h2> 
     <Carousel   propBestsellers={bestsellersBabiesToddlers}/> 
     <h2>Our bestseller  for kids 5-12 years</h2>

@@ -37,7 +37,7 @@ function Books({propBooks, propShowMore, propFunction, propSortHighToLow, propSo
             <div className="detailsCont">
              <h3>{bookname}</h3>
              <p> by <span className="author">{author}</span></p> 
-             <p>category: <span className="author">{searchTerm}</span></p>
+             <p>category:<span className="author">{searchTerm}</span></p>
              <p className="price">  ${price}</p>
              {/* <button>Like</button> */}
              <button className="btnAddToCart">ADD TO CART</button>

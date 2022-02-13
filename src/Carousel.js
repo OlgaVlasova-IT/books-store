@@ -2,7 +2,7 @@ import { useState } from "react"
 
 function Carousel({propBestsellers}) {
     const [start, setStart]= useState(0);
-const [display, setDisplay]= useState(3);
+const [display]= useState(3);
     const handleNext = (inputNumber) => {
         if (inputNumber >= propBestsellers.length) {
     

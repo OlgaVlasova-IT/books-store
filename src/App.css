@@ -19,7 +19,7 @@
   color: #9E866B;
   font-weight: bold;
   margin: 2px;
-  
+
 
 }
 .price {
@@ -51,7 +51,7 @@ justify-content: center;
 }
 
 .bestsellersMainCont{
-  width: 60%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

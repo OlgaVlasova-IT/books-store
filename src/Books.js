@@ -24,7 +24,7 @@ function Books({propBooks, propShowMore, propFunction, propSortHighToLow, propSo
            >Title: A-Z</button>
            <button className="btnSort"
           onClick={()=>{propSortZA(propBooks)}}
-           >Title: A-Z</button>
+           >Title: Z-A</button>
         </div>
         {propBooks.map( book => {
           const {id, bookname , author, price, desc, image, searchTerm} = book;
@@ -44,7 +44,7 @@ function Books({propBooks, propShowMore, propFunction, propSortHighToLow, propSo
              </div>
              </div>
              <div className="descCont">
-             <p>{propShowMore[id-1] ? desc : desc.substring(0, 100)+"..."} 
+             <p className="desc">{propShowMore[id-1] ? desc : desc.substring(0, 100)+"..."} 
              <button className='showMoreBtn' onClick={()=>{propFunction(id)}}>{propShowMore[id-1] ? "Show Less" : "Show More"}</button></p>
              </div>
             </div>

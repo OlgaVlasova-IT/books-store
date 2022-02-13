@@ -18,6 +18,8 @@
 .author {
   color: #9E866B;
   font-weight: bold;
+  margin: 2px;
+  
 
 }
 .price {
@@ -58,6 +60,15 @@ justify-content: center;
 .bestCont{
 
 text-align: center;
+}
+.btnAddToCart{
+  background-color: #336B75;
+  border: none;
+  color: whitesmoke;
+  height: auto;
+  width: 120px;
+  padding: 10px;
+
 }
 
 .booksCatalog {

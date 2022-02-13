@@ -49,7 +49,7 @@ return(
             return(
                <div  key={id} className='cardBestseller'>
                   <div className='img'>
-                <img src={image} width="150px"></img>
+                <img src={image} width="120px"></img>
                 </div> 
                 <div className='bookNameCont'>
                 <p>{bookname}</p>
@@ -57,7 +57,7 @@ return(
                 <p >by <span className='author'>{author}</span></p>
                 <p className="author">{searchTerm}</p>
                 <p className='price'>$ {price}</p>
-                <button > Add to Cart</button>
+                <button className="btnAddToCart" > Add to Cart</button>
                </div>
             )
             } else 

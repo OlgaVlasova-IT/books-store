@@ -55,6 +55,11 @@ justify-content: center;
   align-items: center;
 }
 
+.bestCont{
+
+text-align: center;
+}
+
 .booksCatalog {
 
   display: flex;

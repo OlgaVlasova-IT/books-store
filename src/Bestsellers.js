@@ -1,87 +1,37 @@
 import { useState } from 'react';
 import { data } from './data' 
-
+import Carousel from './Carousel';
 
 function Bestsellers() {
-const [books, setBooks] = useState(data);
+    const [books, setBooks] = useState(data);
 let i = 0;
-const [start, setStart]= useState(0);
-const [display, setDisplay]= useState(2);
-const filterChangeId = (item) =>{
-  if (item.searchTerm.includes("bestseller")){
+const filterBestsellerBabiesToddlers = (item) =>{
+  if (item.searchTerm.includes("bestseller") && (item.searchTerm.includes("0-2")|| item.searchTerm.includes("2-5")  )){
    item.id= i+1;
    i++;
    return item
   }
 }
-const handleNext = (inputNumber) => {
-    if (inputNumber >= bestsellers.length) {
-
-        let tempStart = 0;
-        setStart(tempStart);
-    } else{
-
-    let tempStart = start + display;
-    setStart(tempStart);
-   
+let j = 0;
+const filterBestsellerKids = (item) =>{
+    if (item.searchTerm.includes("bestseller") && (item.searchTerm.includes("5-8")|| item.searchTerm.includes("8-12")  )){
+     item.id= j+1;
+     j++;
+     return item
     }
-}
+  }
 
-const handlePrev = (inputNumber) => {
-    if (inputNumber <= 0) {
-       
-        let tempStart = bestsellers.length -display;
-        setStart(tempStart);
+const temp1 = books.filter(filterBestsellerBabiesToddlers)
+const temp2 = books.filter(filterBestsellerKids)
+const [bestsellersBabiesToddlers] = useState(temp1);
+const [bestsellersKids] = useState(temp2);
 
-    }else{
-        let tempStart = start-display;
-        setStart(tempStart);
-    }
-
-
-}
-const temp = books.filter(filterChangeId)
-const [bestsellers, setBestsellers] = useState(temp);
-
-    return(
-        <div className='booksCatalog'>
-            <h2>Our bestseller</h2>
-
-        <div className='bestsellersMainCont'>
-            
-            <div className='bestsellersCont'>
-                <button onClick={()=>{handlePrev(start)}}>Prev</button>
-              
-                {bestsellers.map( book => {
-
-                const  { id, bookname, image, author, desc, price } = book;
-                
-            
-                if (id >= start+1 && id <= start +display) {
-                return(
-                   <div  key={id} className='cardBestseller'>
-                      <div className='img'>
-                    <img src={image} width="150px"></img>
-                    </div> 
-                    <div className='bookNameCont'>
-                    <p>{bookname}</p>
-                    </div>
-                    <p >by <span className='author'>{author}</span></p>
-                    <p className='price'>$ {price}</p>
-                    <button > Add to Cart</button>
-                   </div>
-                )
-                } else 
-                return(
-                    <div key={id+100} className="noDisplay"> </div>
-                )
-            })}
-                
-<button onClick={() => {handleNext(start+display)}}>Next</button>
-            </div>
-
-            </div>
-        </div>
-    )
+return(<div className='bestCont'>
+     <h2>Our bestseller for Babies and Toddlers</h2> 
+    <Carousel   propBestsellers={bestsellersBabiesToddlers}/> 
+    <h2>Our bestseller  for kids 5-12 years</h2>
+    <Carousel   propBestsellers={bestsellersKids}/>
+    </div>
+)
 }
 export default Bestsellers;

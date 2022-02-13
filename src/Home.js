@@ -103,8 +103,8 @@ return(
     propBooks={books}
     propShowMore={showMore}
     propFunction={handleShowMore}
-    propSortHighToLow={sortLowToHigh}
-    propSortLowToHigh={sortHighToLow}
+    propSortHighToLow={sortHighToLow}
+    propSortLowToHigh={sortLowToHigh}
     propSortAZ ={sortAZ}
     propSortZA ={sortZA}
    />

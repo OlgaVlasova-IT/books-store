@@ -42,7 +42,7 @@ export const data = [
                 "ripping debut features a missing brother, a sinister organisation and a thorou" +
                 "ghly evil magician. ",
         image: "image/4.jpg",
-        searchTerm: "8-12, kids"
+        searchTerm: "8-12, kids, bestseller"
 
     }, {
         id: 5,
@@ -144,6 +144,35 @@ export const data = [
         price: 6.99,
         desc: "One little snail longs to see the world and hitches a lift on the tail of an enormous whale. Together they go on an amazing journey, past icebergs and volcanoes, sharks and penguins, and the little snail feels so small in the vastness of the world. But when disaster strikes and the whale is beached in a bay, it's the tiny snail's big plan that saves the day.",
         image: "image/14.jpg",
-        searchTerm: "0-2, 2-5, babies, toddlers"}
+        searchTerm: "0-2, 2-5, babies, toddlers, bestseller"},
+  {id: 15,
+            bookname: "Diary of a Wimpy Kid: The Deep End (Book 15)",
+            author: "Jeff Kinney",
+            price: 7.99,
+            desc: "In The Deep End, book 15 of the Diary of a Wimpy Kid series from #1 international bestselling author Jeff Kinney, Greg Heffley and his family hit the road for a cross-country camping trip, ready for the adventure of a lifetime. But things take an unexpected turn, and they find themselves stranded at a campsite that's not exactly a summertime paradise. When the skies open up and the water starts to rise, the Heffleys wonder if they can save their vacation - or if they are already in too deep.",
+            image: "image/15.jpg",
+            searchTerm: "5-8, kids, bestseller"},
+     {id: 16,
+                bookname: "The Hatmakers",
+                author: "Tamzin Merchant ",
+                price: 8.99,
+                desc: "Cordelia comes from a long line of magical milliners, who weave alchemy and enchantment into every hat. In Cordelia's world, Making - crafting items such as hats, cloaks, watches, boots and gloves from magical ingredients - is a rare and ancient skill, and only a few special Maker families remain. When Cordelia's father Prospero and his ship, the Jolly Bonnet, are lost at sea during a mission to collect hat ingredients, Cordelia is determined to find him. But Uncle Tiberius and Aunt Ariadne have no time to help the littlest Hatmaker, for an ancient rivalry between the Maker families is threatening to surface. Worse, someone seems to be using Maker magic to start a war.",
+                image: "image/16.jpg",
+                searchTerm: "5-8, kids, bestseller"},   
+    {id: 17,
+                    bookname: "The Danger Gang",
+                    author: "Tom Fletcher",
+                    price: 8.99,
+                    desc: "Franky can't wait to move to his new town - although he wishes he didn't have to leave his best friend Dani behind. But everything changes after the storm, when strange green lightning and powerful thunder crash down on the town. From that night on, the kids who live on Franky's street start to change. One by one, they become a little odd. A little unusual. A little... magical.",
+                    image: "image/17.jpg",
+                    searchTerm: "5-8, kids, bestseller"},  
+
+ {id: 18,
+                        bookname: "The Last Bear",
+                        author: "Hannah Gold",
+                        price: 6.99,
+                        desc: "This moving story will win the hearts of children the world over and show them that no one is too young or insignificant to make a difference. The Last Bear is a celebration of the love between a child and an animal, a battle cry for our world and an irresistible adventure with a heart as big as a bear's.",
+                        image: "image/18.jpg",
+                        searchTerm: "5-8, kids, bestseller"},  
 
 ]

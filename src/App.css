@@ -1,7 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&family=Parisienne&family=Tangerine&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
 .App{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Marcellus SC', serif;
 
 }
 
@@ -9,7 +17,10 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.heading {
+  font-family: 'Tangerine', cursive;
+  font-size: 40px;
+}
 .showMoreBtn {
   background-color: transparent;
   border: none;
@@ -57,12 +68,22 @@ justify-content: center;
   align-items: center;
 }
 
+.btnNextPrev {
+  background-color: #9E866B;
+  border-radius: 5px;
+  border:none;
+  color: whitesmoke;
+  width: 60px;
+  height: 30px;
+}
+
 .bestCont{
 
 text-align: center;
 }
 .btnAddToCart{
   background-color: #336B75;
+  border-radius: 5px;
   border: none;
   color: whitesmoke;
   height: auto;

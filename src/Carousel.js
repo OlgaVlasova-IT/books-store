@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+
 function Carousel({propBestsellers}) {
     const [start, setStart]= useState(0);
 const [display]= useState(3);
@@ -38,7 +39,7 @@ return(
     <div className='bestsellersMainCont'>
         
         <div className='bestsellersCont'>
-            <button onClick={()=>{handlePrev(start)}}>Prev</button>
+            <button className="btnNextPrev" onClick={()=>{handlePrev(start)}}>PREV</button>
           
             {propBestsellers.map( book => {
 
@@ -49,7 +50,7 @@ return(
             return(
                <div  key={id} className='cardBestseller'>
                   <div className='img'>
-                <img src={image} width="120px"></img>
+                <img src={image} width="120px" alt="book cover"></img>
                 </div> 
                 <div className='bookNameCont'>
                 <p>{bookname}</p>
@@ -57,7 +58,7 @@ return(
                 <p >by <span className='author'>{author}</span></p>
                 <p className="author">{searchTerm}</p>
                 <p className='price'>$ {price}</p>
-                <button className="btnAddToCart" > Add to Cart</button>
+                <button className="btnAddToCart">ADD TO CART</button>
                </div>
             )
             } else 
@@ -66,7 +67,7 @@ return(
             )
         })}
             
-<button onClick={() => {handleNext(start+display)}}>Next</button>
+<button className="btnNextPrev" onClick={() => {handleNext(start+display)}}>NEXT</button>
         </div>
 
         </div>

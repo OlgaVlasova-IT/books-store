@@ -10,7 +10,7 @@ function Books({propBooks, propShowMore, propFunction, propSortHighToLow, propSo
         <div className='booksCatalog'>
         <h4>Explore our selection of {propBooks.length} books</h4>
         <div className="sortCont"> 
-          <p> Sort by:</p>
+         
           <button 
           className="btnSort"
           onClick={()=>{propSortLowToHigh(propBooks)}}

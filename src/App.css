@@ -333,6 +333,10 @@ height: auto;
 }
 
 @media all and (max-width: 800px) {
+  .cartIconCont {
+    position: absolute;
+    top: 2em;
+    right: 1em;}
   .cart{
     
       position: absolute;

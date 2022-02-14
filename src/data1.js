@@ -1,4 +1,4 @@
-export const data1 = [
+export const data = [
     {
         id: 1,
         bookname: "SLEEP, MY BABY",
@@ -24,7 +24,7 @@ export const data1 = [
 
     }, {
         id: 3,
-        bookname: "Rabbit and Bear: A Bad King is a Sad Thing: Book ",
+        bookname: "Rabbit and Bear: A Bad King is a Sad Thing",
         author: "Julian Gough",
         price: 10,
         desc: "The fifth instalment of the popular children’s series finds our lovable duo fa" +
@@ -35,7 +35,7 @@ export const data1 = [
 
     }, {
         id: 4,
-        bookname: "Amari and the Night Brothers (Paperback) ",
+        bookname: "Amari and the Night Brothers",
         author: "BB Alston",
         price: 10,
         desc: "A rip-roaring supernatural adventure with a lovable lead character, Alston’s g" +
@@ -77,7 +77,7 @@ export const data1 = [
     },
     {
         id: 8,
-        bookname: "Ten Minutes to Bed: Little Dragon - Ten Minutes to Bed",
+        bookname: "Little Dragon - Ten Minutes to Bed",
         author: "Rhiannon Fielding ",
         price: 5.99,
         desc: "This is the perfect book to calm little sleepy dragons everywhere, just in time to go to bed.Soaring high in the skies to find adventure, little dragon siblings Flicker and Flash are doing their best to avoid going to bed. But then they spot a lost egg that they need to get back to its mother - will they get back in time?",
@@ -129,7 +129,7 @@ export const data1 = [
     },
     {
         id: 13,
-        bookname: "The Very Hungry Caterpillar - The Very Hungry Caterpillar",
+        bookname: "The Very Hungry Caterpillar",
         author: "Eric Carle",
         price: 6.99,
         desc: "Eric Carle's The Very Hungry Caterpillar is a perennial favourite with children and adults alike. Its imaginative illustration and clever cut-out detail charts the progress of a very hungry caterpillar as he eats his way through the week.",
@@ -146,7 +146,7 @@ export const data1 = [
         image: "image/14.jpg",
         searchTerm: "0-2, 2-5, babies, toddlers, bestseller"},
   {id: 15,
-            bookname: "Diary of a Wimpy Kid: The Deep End (Book 15)",
+            bookname: "Diary of a Wimpy Kid: The Deep End",
             author: "Jeff Kinney",
             price: 7.99,
             desc: "In The Deep End, book 15 of the Diary of a Wimpy Kid series from #1 international bestselling author Jeff Kinney, Greg Heffley and his family hit the road for a cross-country camping trip, ready for the adventure of a lifetime. But things take an unexpected turn, and they find themselves stranded at a campsite that's not exactly a summertime paradise. When the skies open up and the water starts to rise, the Heffleys wonder if they can save their vacation - or if they are already in too deep.",

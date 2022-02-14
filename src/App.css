@@ -333,6 +333,11 @@ height: auto;
 }
 
 @media all and (max-width: 800px) {
+  .cart{
+    
+      position: absolute;
+      top: 6.0em;
+      right: 1em;}
   .bestsellersMainCont{
     width: 95%;
 

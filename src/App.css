@@ -26,6 +26,7 @@
 .heading {
   font-family: 'Tangerine', cursive;
   font-size: 40px;
+ text-align: center;
 }
 .showMoreBtn {
   background-color: transparent;
@@ -234,6 +235,7 @@ li {
 
 }
 .cardBestseller{
+ 
   font-family: 'Marcellus SC', serif;
   height: 28hv;
   width:80%;
@@ -371,9 +373,10 @@ height: auto;
     margin: 3px;
   }
   .cardBestseller{
-
+ border-bottom: 2px solid lightgray;
     width:120%;
     display: flex;
+    padding-bottom: 10px;
   }
 
   .bestsellersCont{

@@ -13,7 +13,7 @@ function Books({propBooks, propShowMore, propFunction, propSortHighToLow,
         <div className="App">
        
         <div className='booksCatalog'>
-        <h4>Explore our selection of {propBooks.length} books</h4>
+        {/* <h4>Explore our selection of {propBooks.length} books</h4> */}
         <div className="sortCont"> 
          
           <button 
@@ -32,6 +32,7 @@ function Books({propBooks, propShowMore, propFunction, propSortHighToLow,
            >Title: Z-A</button>
         </div> 
         <div id= "cart"className="cart">
+          <h3>Shopping Cart</h3>
          
        {propCartList.map( book => {
        const {id, bookname, price , image} =book;

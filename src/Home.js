@@ -134,7 +134,10 @@ const sortAZ = (arr) => {
   }
 
 return(
-    <div>
+    <div className="App" >
+        <div className="headingCont">
+        <h4 >Explore our selection of {books.length} books</h4>
+        </div>
         <Filters propFilter={filterByAge} propClearAll ={handleClearAll}/>
       <Books
     propBooks={books}

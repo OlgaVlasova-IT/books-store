@@ -28,9 +28,9 @@ const [bestsellersBabiesToddlers] = useState(temp1);
 const [bestsellersKids] = useState(temp2);
 
 return(<div className='booksCatalog'>
-     <h2  className='heading'>Our bestseller for Babies and Toddlers</h2> 
+     <h2  className='heading'>Our bestsellers for Babies and Toddlers</h2> 
     <Carousel   propBestsellers={bestsellersBabiesToddlers}/> 
-    <h2 className="heading">Our bestseller  for kids 5-12 years</h2>
+    <h2 className="heading">Our bestsellers  for kids 5-12 years</h2>
     <Carousel   propBestsellers={bestsellersKids}/>
     </div>
 )

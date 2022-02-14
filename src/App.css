@@ -347,7 +347,7 @@ height: auto;
   }
   .filterBtn {
 
-    margin:15px;
+    margin: 10px;
   }
   .cartIconCont {
     position: absolute;
@@ -399,13 +399,14 @@ height: auto;
   }
 
   .navBar {
-    flex-direction: row;
+    flex-direction: column;
     font-family: 'Hind Vadodara', sans-serif;
   }
 
   
   .link {
     margin: 0;
+    padding: 5px;
     text-decoration: none;
     /* padding: 5px 10px; */
    

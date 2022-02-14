@@ -1,8 +1,13 @@
+import cancelIcon from './cancel.png'
 
 
-function Books({propBooks, propShowMore, propFunction, propSortHighToLow, propSortLowToHigh, propSortAZ, propSortZA}) {
-
+function Books({propBooks, propShowMore, propFunction, propSortHighToLow, 
+           propSortLowToHigh, propSortAZ, propSortZA, propAddToCart,
+            propCartList, propDeleteItem }) {
  
+ 
+
+
     return(
 
         <div className="App">
@@ -25,7 +30,34 @@ function Books({propBooks, propShowMore, propFunction, propSortHighToLow, propSo
            <button className="btnSort"
           onClick={()=>{propSortZA(propBooks)}}
            >Title: Z-A</button>
+        </div> 
+        <div id= "cart"className="cart">
+         
+       {propCartList.map( book => {
+       const {id, bookname, price , image} =book;
+       return(
+         <div key={id}>
+        <div  className='liCont'>
+        <img src={image} alt="book cover" width="48px" height="auto"></img>
+        <div className='additionalCont'>
+        <div className="titleCont">
+          <p>{bookname}</p>
+         
         </div>
+        <div className="priceCont">
+        <p>${price}</p>
+        </div>
+        </div>
+        <button className="btnCancel" onClick={()=>{propDeleteItem(id)}} ><img src={cancelIcon} alt="delete Icon" width="15px" height="15px"/></button>
+    </div>
+   
+    </div>
+       )})}
+        {/* <div className='totalCont'>
+      Total: $ {propTotal}
+    </div> */}
+</div>
+
         {propBooks.map( book => {
           const {id, bookname , author, price, desc, image, searchTerm} = book;
           return(
@@ -40,7 +72,7 @@ function Books({propBooks, propShowMore, propFunction, propSortHighToLow, propSo
              <p>category:<span className="author">{searchTerm}</span></p>
              <p className="price">  ${price}</p>
              {/* <button>Like</button> */}
-             <button className="btnAddToCart">ADD TO CART</button>
+             <button className="btnAddToCart" onClick={()=>{propAddToCart(id)}}>ADD TO CART</button>
              </div>
              </div>
              <div className="descCont">
@@ -51,8 +83,9 @@ function Books({propBooks, propShowMore, propFunction, propSortHighToLow, propSo
            
           )
         })}
-        </div>
         
+        
+      </div>
       </div>
 
 

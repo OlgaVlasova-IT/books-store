@@ -11,6 +11,46 @@ const [booksNoFilter] =useState(data);
 //array of variables to display short/full description of the book
 const [showMore, setShowMore] = useState(new Array(books.length).fill(false))
 
+const [cartList, setCartList] =useState([])
+// const [total, setTotal] = useState(0);
+
+  
+
+const addToCart = (id) =>{
+ const x = document.getElementById('cart');
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    }
+
+    if (!cartList.find( element => element.id === id)){
+    let temp = [...cartList];
+
+    books.forEach( item=> {
+        
+      if (item.id === id ) {
+        const bookToAdd = {...item};
+        temp.push(bookToAdd)
+      }
+    
+     })
+
+    setCartList(temp);
+    }
+
+ }
+    
+const deleteItem = (id) => {
+
+  const temp = cartList.filter(element => element.id !== id)
+  //update WatchList
+  setCartList(temp);
+
+  if (cartList.length === 1) {
+     const divCart= document.getElementById("cart");
+     divCart.style.display="none";
+  }
+    
+  }
 
 const filterByAge = (input) => {
 
@@ -19,7 +59,6 @@ const filterByAge = (input) => {
     setBooks(temp);
     
 }
-
 //function to update the value of showMore[id-1] to the opposite (true/false)
 const handleShowMore = (id) => {
     let temp = [...showMore];
@@ -32,7 +71,7 @@ const handleClearAll = () =>{
 }
 
 const sortLowToHigh = (arr) => {
-    console.log(arr)
+
     
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length-1; j++) {
@@ -49,7 +88,6 @@ const sortLowToHigh = (arr) => {
 }
 
 const sortHighToLow = (arr) => {
-  console.log(arr)
     
    for (let i = 0; i < arr.length; i++) {
        for (let j = 0; j < arr.length-1; j++) {
@@ -106,8 +144,13 @@ return(
     propSortLowToHigh={sortLowToHigh}
     propSortAZ ={sortAZ}
     propSortZA ={sortZA}
+    propAddToCart={addToCart}
+    propCartList ={cartList}
+    propDeleteItem={deleteItem}
    />
     </div>
-)}
+)
+
+}
 
 export default Home;
